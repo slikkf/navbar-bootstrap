@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar-nav .nav-link {
+      color: var(--bs-dark) !important;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: var(--bs-primary) !important;
+      font-weight: 500;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--bs-primary) !important;
+    }
+
+    section {
+      scroll-margin-top: 56px;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#home">Brand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-scroll="false" data-bs-backdrop="true">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-lg-3">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+              <ul class="dropdown-menu border-0 shadow">
+                <li><a class="dropdown-item" href="#about">Our Team</a></li>
+                <li><a class="dropdown-item" href="#services">Pricing</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#contact">Support</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control rounded-pill me-2 px-3" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary rounded-pill px-3" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="py-5 bg-white">
+    <div class="container">
+      <div class="bg-light rounded-4 min-vh-100 d-flex flex-column justify-content-center align-items-center text-center p-5">
+        <h1 class="display-4 fw-bold">Section: Home</h1>
+        <p class="lead text-secondary mt-3">Navbar with Dropdown, search form, responsive Offcanvas and Scrollspy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center p-5">
+        <h1 class="display-4 fw-bold">Section: About</h1>
+        <p class="lead text-white-50 mt-3">Scroll the page and watch the active menu item change automatically.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 bg-white">
+    <div class="container">
+      <div class="bg-light rounded-4 min-vh-100 d-flex flex-column justify-content-center align-items-center text-center p-5">
+        <h1 class="display-4 fw-bold">Section: Services</h1>
+        <p class="lead text-secondary mt-3">On small screens the menu moves into a side Offcanvas panel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center p-5">
+        <h1 class="display-4 fw-bold">Section: Contact</h1>
+        <p class="lead text-white-50 mt-3">Міщук Іван, ВСП ВІФК НУХТ</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
